@@ -1,10 +1,13 @@
-# Twitter Process Application
-The classical process application for Camunda BPM.
+# Twitter Spring-Boot Application
 
 ## Build it with maven
 
-`mvn clean package` and copy `twitter.war` to the deployment folder
+Build the uber jar:
+`mvn clean package`
 
-`mvn clean wildfly:deploy`to deploy directly to the running wildfly server.
+Run it:
+`java -jar target/twitter-spring-boot.jar`
 
-`mvn clean package -Dmaven.test.skip=true` if you want to deploy very fast.
+-- or --
+
+`mvn clean spring-boot:run` to run it directly from maven.
