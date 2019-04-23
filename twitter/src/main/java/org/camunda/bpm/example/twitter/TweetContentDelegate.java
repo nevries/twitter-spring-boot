@@ -2,11 +2,9 @@ package org.camunda.bpm.example.twitter;
 
 import java.net.UnknownHostException;
 
-import javax.inject.Named;
-
-import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.springframework.stereotype.Component;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
@@ -17,7 +15,7 @@ import twitter4j.auth.AccessToken;
  * Publish content on Twitter. It really goes live! 
  * Watch out http://twitter.com/#!/camunda_demo for your postings.
  */
-@Named("tweetAdapter")
+@Component("tweetAdapter")
 public class TweetContentDelegate implements JavaDelegate {
 
   public void execute(DelegateExecution execution) throws Exception {
